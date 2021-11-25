@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArithmeticProgression.cs" />
+    <Compile Include="GeometricProgression.cs" />
+    <Compile Include="IIndexable.cs" />
+    <Compile Include="IIndexableSeries.cs" />
+    <Compile Include="ISeries.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

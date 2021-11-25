@@ -12,5 +12,13 @@ namespace Пр6
         {
 
         }
+        static void PrintSeries(ISeries series, int count)
+        {
+            for (int i=0; i<count; i++)
+            {
+                series.MoveNext();
+                Console.WriteLine(series.GetCurrent());
+            }
+        }
     }
 }
