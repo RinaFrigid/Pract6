@@ -10,7 +10,10 @@ namespace Пр6
     {
         static void Main(string[] args)
         {
-
+            GeometricProgression gP = new GeometricProgression();
+            ArithmeticProgression aP = new ArithmeticProgression();
+            PrintSeries(gP, 6);
+            PrintIndexable(aP, 9);
         }
         public static void PrintSeries(ISeries series, int count)
         {
@@ -24,7 +27,9 @@ namespace Пр6
         {
             for (int i = 0; i < count; i++)
             {
-                Console.WriteLine(indexable.GetCurrent());
+                indexable.ToString();
+                Console.WriteLine("{0}\n",indexable.GetType());
+
             }
         }
     }
