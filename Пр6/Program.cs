@@ -14,6 +14,10 @@ namespace Пр6
             ArithmeticProgression aP = new ArithmeticProgression();
             PrintSeries(gP, 6);
             PrintIndexable(aP, 9);
+            ISeries[] series = new ISeries[2];
+            series[0] = gP;
+            series[1] = aP;
+
         }
         public static void PrintSeries(ISeries series, int count)
         {
