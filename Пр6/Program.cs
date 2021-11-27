@@ -10,6 +10,13 @@ namespace Пр6
     {
         static void Main(string[] args)
         {
+            double a, b, c;
+            a =c= double.Parse(Console.ReadLine());
+            b= double.Parse(Console.ReadLine());
+            int i= int.Parse(Console.ReadLine());
+            ArithmeticProgression AP = new ArithmeticProgression(a,c);
+            GeometricProgression GP = new GeometricProgression(a, c, b);
+            Console.WriteLine();
 
         }
         static void PrintSeries(ISeries series, int count)
@@ -17,6 +24,14 @@ namespace Пр6
             for (int i=0; i<count; i++)
             {
                 series.MoveNext();
+                Console.WriteLine(series.GetCurrent());
+            }
+        }
+        static void PrintIndexable(IIndexable indexable, int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                indexable.G();
                 Console.WriteLine(series.GetCurrent());
             }
         }
