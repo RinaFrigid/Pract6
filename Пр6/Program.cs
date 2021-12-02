@@ -11,6 +11,13 @@ namespace Пр6
         static void Main(string[] args)
         {
             double a, b, c;
+            a =c= double.Parse(Console.ReadLine());
+            b= double.Parse(Console.ReadLine());
+            int i= int.Parse(Console.ReadLine());
+            ArithmeticProgression AP = new ArithmeticProgression(a,c);
+            GeometricProgression GP = new GeometricProgression(a, c, b);
+            Console.WriteLine();
+            double a, b, c;
             a = c = double.Parse(Console.ReadLine());
             b= double.Parse(Console.ReadLine());
             int i= int.Parse(Console.ReadLine());
