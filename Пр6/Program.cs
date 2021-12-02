@@ -10,10 +10,15 @@ namespace Пр6
     {
         static void Main(string[] args)
         {
-            GeometricProgression gP = new GeometricProgression();
-            ArithmeticProgression aP = new ArithmeticProgression();
-            PrintSeries(gP, 6);
-            PrintIndexable(aP, 9);
+            double a, b, c;
+            a = c = double.Parse(Console.ReadLine());
+            b= double.Parse(Console.ReadLine());
+            int i= int.Parse(Console.ReadLine());
+            GeometricProgression gP = new GeometricProgression(a,c);
+            ArithmeticProgression aP = new ArithmeticProgression(a,c,b);
+            Console.WriteLine(a);
+            PrintSeries(gP, i);
+            PrintIndexable(aP, i);
             ISeries[] series = new ISeries[2];
             series[0] = gP;
             series[1] = aP;

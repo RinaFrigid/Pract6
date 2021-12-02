@@ -8,21 +8,30 @@ namespace Пр6
 {
     public class ArithmeticProgression : IIndexableSeries
     {
-        public double this[int index] => throw new NotImplementedException();
-
+        double IIndexable.a => throw new NotImplementedException();
+        double IIndexable.b => throw new NotImplementedException();
+        double IIndexable.c => throw new NotImplementedException();
+        public ArithmeticProgression (double a, double c)
+        {
+            _a = a;
+            _c = c;
+        }
+        double _c;
+        double _a;
         public double GetCurrent()
         {
-            throw new NotImplementedException();
+            _a += _a;
+            return _a;
         }
 
         public bool MoveNext()
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public void Reset()
         {
-            throw new NotImplementedException();
+           _a=_c
         }
     }
 }

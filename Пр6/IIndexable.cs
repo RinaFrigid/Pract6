@@ -8,6 +8,8 @@ namespace Пр6
 {
     public interface IIndexable
     {
-        double this[int index] { get; }
+        double a { get; }
+        double b { get; }
+        double c { get; }
     }
 }
