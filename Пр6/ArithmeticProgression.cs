@@ -31,7 +31,7 @@ namespace Пр6
 
         public void Reset()
         {
-           _a=_c
+            _a = _c;
         }
     }
 }

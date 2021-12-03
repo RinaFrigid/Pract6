@@ -8,21 +8,32 @@ namespace Пр6
 {
     class GeometricProgression : IIndexableSeries
     {
-        public double this[int index] => throw new NotImplementedException();
-
-        public double GetCurrent()
+        double IIndexable.a => throw new NotImplementedException();
+        double IIndexable.b => throw new NotImplementedException();
+        double IIndexable.c => throw new NotImplementedException();
+        public GeometricProgression(double a, double c, double b)
         {
-            throw new NotImplementedException();
+            _c = c;
+            _a = a;
+            _b = b;
+        }
+        double _c;
+        double _a;
+        double _b;
+        double ISeries.GetCurrent()
+        {
+            _a *= _b;
+            return _a;
         }
 
-        public bool MoveNext()
+        bool ISeries.MoveNext()
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public void Reset()
         {
-            throw new NotImplementedException();
+            _a = _c;
         }
     }
 }

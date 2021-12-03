@@ -16,19 +16,13 @@ namespace Пр6
             int i= int.Parse(Console.ReadLine());
             ArithmeticProgression AP = new ArithmeticProgression(a,c);
             GeometricProgression GP = new GeometricProgression(a, c, b);
-            Console.WriteLine();
-            double a, b, c;
-            a = c = double.Parse(Console.ReadLine());
-            b= double.Parse(Console.ReadLine());
-            int i= int.Parse(Console.ReadLine());
-            GeometricProgression gP = new GeometricProgression(a,c);
-            ArithmeticProgression aP = new ArithmeticProgression(a,c,b);
             Console.WriteLine(a);
-            PrintSeries(gP, i);
-            PrintIndexable(aP, i);
-            ISeries[] series = new ISeries[2];
-            series[0] = gP;
-            series[1] = aP;
+            PrintSeries(GP, i);
+            PrintIndexable(AP, i);
+            /*ISeries[] series = new ISeries[2];
+            series[0] = GP;
+            series[1] = AP;*/
+
 
         }
         public static void PrintSeries(ISeries series, int count)
