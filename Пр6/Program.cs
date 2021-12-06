@@ -10,18 +10,19 @@ namespace Пр6
     {
         static void Main(string[] args)
         {
-            double a, b, c;
-            Console.Write("Укажите первый элемент прогрессии: ");
+            double a, b, c;//переменные
+            double t = 0;
+            Console.Write("Укажите первый элемент прогрессии: ");//ввод значений пользователем
             a =c= double.Parse(Console.ReadLine());
             Console.Write("Коэффициент прогрессии: ");
             b = double.Parse(Console.ReadLine());
             Console.Write("Количество элементов: ");
-            int i= int.Parse(Console.ReadLine())-1;
+            int i= int.Parse(Console.ReadLine());
             ArithmeticProgression AP = new ArithmeticProgression(a,c,b);
-            GeometricProgression GP = new GeometricProgression(a, c, b);
-            Console.WriteLine("Геометрическая прогрессия\n{0}",a);
+            GeometricProgression GP = new GeometricProgression(a, c, b,t);
+            Console.WriteLine("Геометрическая прогрессия:");
             PrintSeries(GP, i);
-            Console.WriteLine("Арифметическая прогрессия\n{0}", a);
+            Console.WriteLine("Арифметическая прогрессия:");
             PrintSeries(AP, i);
             Console.ReadKey();
         }

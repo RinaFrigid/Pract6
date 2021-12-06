@@ -11,18 +11,21 @@ namespace Пр6
         double IIndexable.a => throw new NotImplementedException();
         double IIndexable.b => throw new NotImplementedException();
         double IIndexable.c => throw new NotImplementedException();
-        public GeometricProgression(double a, double c, double b)
+        public GeometricProgression(double a, double c, double b, double t)
         {
             _c = c;
             _a = a;
             _b = b;
+            _t = t;
         }
         double _c;
         double _a;
         double _b;
+        double _t;
         double ISeries.GetCurrent()
         {
-            _a *= _b;
+            _a = Math.Pow(_b,_t);
+            _t++;
             return _a;
         }
 

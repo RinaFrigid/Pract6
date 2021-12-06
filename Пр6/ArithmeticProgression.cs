@@ -20,9 +20,11 @@ namespace Пр6
         double _c;
         double _a;
         double _b;
+        double t = 0;
         public double GetCurrent()
         {
-            _a = _a + _b;
+            _a += t;
+            t = _b;
             return _a;
         }
 
